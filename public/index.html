@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naughts and Crosses</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!--<script src=/js/script.js defer></script> -->
+    <title>Document</title>
+    <link rel="icon" href="/icons/Noughts-and-crosses.png">
+</head>
+<body>
+    <button type="button" id="startButton" class="btn-start btn btn-lg">Start</button>
+    <button type="button" id="startAIButton" class="btn-start-AI btn btn-lg">Start AI game</button>
+<section>
+    <div class="starting-section"></div>
+        <div class="container">
+            <div class="grid" id="grid">
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <div class="grid-item" data-cell></div>
+                <!--<div class="bg1"></div>-->
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="max-players-section">
+        <h2 class="filled">There are too many players at this time!</h2>
+    </div>
+</section>
+<section>
+    <div class="result-screen">
+        <div class = "results">
+            <div class="winningPlayer"></div>
+        </div>
+    </div>
+</section>
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="/js/jquery.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+</body>
+</html>

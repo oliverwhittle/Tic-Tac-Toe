@@ -1,0 +1,223 @@
+.filled {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+body{
+    background: #06D6A0;
+}
+
+.results{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    width: 720px;
+    height: 480px;
+    background: #FFD166;
+    transition: 0.1s ease all;
+    text-align: center;
+    font-size: 100px; 
+}
+
+.winningPlayer{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 60px;
+    padding: 20px;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    color: black;
+    background: linear-gradient(-45deg, #FF134A 50%, #0080AB 50%);
+    font-family: Inter, sans-serif;
+}
+
+.btn-start-AI {
+    display: block;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s ease all;
+    background: linear-gradient(-45deg, #FF134A 50%, #0080AB 50%);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    height: 180px;
+    font-size: 60px;
+    cursor:pointer;
+  }
+
+.btn-start {
+    display: block;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s ease all;
+    background: linear-gradient(-45deg, #FF134A 50%, #0080AB 50%);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    height: 90px;
+    font-size: 60px;
+    cursor:pointer;
+
+    overflow: visible;
+    -webkit-transition: height 0.1s;
+    transition: height 0.1s;
+    white-space: break-spaces; 
+  }
+  .btn-start:hover {
+    height: 180px;
+    -webkit-transition: height 0.1s;
+    transition: height 0.1s;
+  }
+  .btn-start:hover::after {
+    content: '';
+    
+  }
+
+/*.grid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    grid-template-columns: auto auto auto;
+    height: 300px;
+    width:300px;
+    grid-gap: auto;
+    cursor: pointer;
+}
+
+.grid-item{
+    border: 6px solid #073B4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}*/
+
+.container{
+    background:#14BDAC;
+    display: none;
+    padding: 50px;
+    border-radius: 25px;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+    cursor: pointer;
+    background: #0DA192;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #1ab8a8;
+  }
+
+  .grid-item:hover {
+    opacity: 0.5;
+  }
+  /*.bg1 {
+    background: #073B4c;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    z-index: -1;
+  }*/
+
+.grid-item:nth-child(1),
+.grid-item:nth-child(2),
+.grid-item:nth-child(3){
+    border-top: none;
+    
+}
+
+.grid-item:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.grid-item:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.grid-item:nth-child(7),
+.grid-item:nth-child(8),
+.grid-item:nth-child(9){
+    border-bottom: none;
+}
+
+.grid-item.X::before,
+.grid-item.X::after,
+.grid.X .grid-item:not(.x):not(.O):hover::before,
+.grid.X .grid-item:not(.x):not(.O):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 360px;
+    width: 10px;
+    height: 80px;
+    background-color:#FF134A;
+}
+.grid-item.X::before, 
+.grid.X .grid-item:not(.X):not(.O):hover::before{
+    transform: rotate(45deg);
+}
+.grid-item.X::after,
+.grid.X .grid-item:not(.X):not(.O):hover::after{
+    transform: rotate(-45deg);
+}
+
+
+.grid-item.O::before,
+.grid-item.O::after,
+.grid.O .grid-item:not(.X):not(.O):hover::before,
+.grid.O .grid-item:not(.X):not(.O):hover::after{
+    content: '';
+    position: absolute; 
+}
+.grid-item.O::before,
+.grid.O .grid-item:not(.X):not(.O):hover::before{
+    height: 80px;
+    width: 80px;
+    background-color: #0080AB;
+    border-radius: 50%;
+}
+.grid-item.O::after,
+.grid.O .grid-item:not(.X):not(.O):hover::after{
+    height: 60px;
+    width: 60px;
+    background-color: #1ab8a8;
+    border-radius: 50%;
+}
